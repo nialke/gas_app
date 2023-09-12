@@ -1,3 +1,6 @@
 menu:
   calculator: Kalkulator
   pipes: Rury i kształtki
+
+pipe:
+  add: Dodaj rurę

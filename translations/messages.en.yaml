@@ -1,3 +1,6 @@
 menu:
   calculator: Calculator
   pipes: Pipes and fittings
+
+pipe:
+  add: Add pipe

@@ -2,21 +2,59 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\PipeRepository")
+ */
 class Pipe
 {
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private ?int $id = null;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private ?string $name = null;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private ?string $material = null;
 
+    /**
+     * @ORM\Column(type="float")
+     */
     private ?float $minimumYieldStrength = null;
 
+    /**
+     * @ORM\Column(type="float")
+     */
     private ?float $tensileStrength = null;
 
+    /**
+     * @ORM\Column(type="float")
+     */
     private ?float $outerDiameter = null;
 
+    /**
+     * @ORM\Column(type="float")
+     */
     private ?float $nominalWallThickness = null;
 
+    /**
+     * @ORM\Column(type="float")
+     */
     private ?float $corrosionAllowance = null;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
     public function getName(): ?string
     {
